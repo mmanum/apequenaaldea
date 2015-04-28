@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="aPequenaAldeaDB"/>
+  <table-filter match-name="taxsProduct"/>
+  <table-filter match-name="invoices"/>
+  <table-filter match-name="pickings"/>
+  <table-filter match-name="products"/>
+  <table-filter match-name="companies"/>
+  <table-filter match-name="picklines"/>
+  <table-filter match-name="taxsClient"/>
+</hibernate-reverse-engineering>

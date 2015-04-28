@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 21, 2015 7:11:40 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.xaduin.invoduin.persistence.domain.Companies" table="companies" catalog="aPequenaAldeaDB" optimistic-lock="version">
+        <id name="idcompanies" type="java.lang.Integer">
+            <column name="idcompanies" />
+            <generator class="identity" />
+        </id>
+        <property name="available" type="boolean">
+            <column name="available" not-null="true" />
+        </property>
+        <property name="cif" type="string">
+            <column name="cif" length="25" />
+        </property>
+        <property name="nameCommercial" type="string">
+            <column name="nameCommercial" length="45" />
+        </property>
+        <property name="name" type="string">
+            <column name="name" length="45" />
+        </property>
+        <property name="address" type="string">
+            <column name="Address" length="45" />
+        </property>
+        <property name="cp" type="java.lang.Integer">
+            <column name="cp" />
+        </property>
+        <property name="city" type="string">
+            <column name="city" length="45" />
+        </property>
+        <property name="state" type="string">
+            <column name="state" length="25" />
+        </property>
+        <property name="country" type="string">
+            <column name="country" length="25" />
+        </property>
+        <property name="tlf" type="string">
+            <column name="tlf" length="45" />
+        </property>
+        <set name="invoiceses" table="invoices" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idcustomers" not-null="true" />
+            </key>
+            <one-to-many class="com.xaduin.invoduin.persistence.domain.Invoices" />
+        </set>
+        <set name="pickingses" table="pickings" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="customers_idcustomers" not-null="true" />
+            </key>
+            <one-to-many class="com.xaduin.invoduin.persistence.domain.Pickings" />
+        </set>
+    </class>
+</hibernate-mapping>

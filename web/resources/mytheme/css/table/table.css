@@ -1,0 +1,64 @@
+table.clasico {
+    border-collapse: collapse;
+    border: 1px solid #99bbe8;
+    empty-cells: show;
+    width: 100%;
+}
+
+table.clasico thead th,
+table.clasico thead td {
+    background: #ffffff url(images/table_th.gif) repeat-x;
+    padding-left: 8px;
+    border: 1px solid #d0d0d0;
+    font-weight: bold;
+}
+
+table.clasico caption {
+    color: #fff;
+    background: #34302D;
+    text-align: left;
+    vertical-align: middle;
+    font-weight: bold;
+    padding: 4px;
+    padding-left: 8px;
+}
+
+table.clasico tbody td,
+table.clasico tbody th {
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+table.clasico tfoot td,
+table.clasico tfoot th {
+    color: #090;
+    background: #ffffff url(images/table_foot.gif) repeat-x;
+    border-top: 1px #d0d0d0 solid;
+}
+
+._imp {
+    background-color: #fff;
+    color: #444;
+}
+
+._par {
+    background: #dfd;
+    color: #444;
+}
+
+._ilumina {
+    background-color: #9f9;
+    color: #000;
+}
+
+table.clasico a img {
+    border: none;
+}
+
+table.clasico select {
+    font-size: 0.8em;
+    width: 50px;
+    height: 16px;
+    text-align: center;
+}
+

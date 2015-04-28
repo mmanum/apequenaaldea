@@ -1,0 +1,131 @@
+
+body {    
+    //background: #F1F1F1;
+    //font-family: Arial, Helvetica, sans-serif;
+    //font-size: 0.7em;
+    margin: 2% !important;
+}
+
+a:active, a:link, a:visited {
+    color: #444;
+    text-decoration: underline;
+}
+
+a:hover 	{
+    color: #900;
+    font-weight: bold;
+}
+
+section {
+    clear: both;
+}
+
+tfoot {
+    text-align: center;
+} 
+
+.header-invoice {
+    margin: auto 0px;    
+    width:auto !important;
+}
+
+.invoice-customer {
+    float: right;
+    margin: 0px 0px 0px auto;
+    //text-align: right;
+    width:35% !important;    
+}
+.invoice-customer th {   
+    text-align: right !important;
+    width: auto !important;   
+}
+
+.invoice-customer td {    
+    padding: 4px !important;    
+    text-align: left !important;
+    width: auto !important;   
+}
+
+.invoice-datas { 
+    float:left;
+    margin: 0px auto 0px 0px;
+    width:63% !important;
+}
+
+.invoice-datas th, .invoice-datas td {
+    text-align: center !important;
+    width: auto !important;
+}
+ 
+
+
+.invoice-ins-customer {
+    float: left;
+    margin: 0px 0px 0px auto;
+    //text-align: right;
+    width:50% !important;    
+}
+.invoice-ins-customer th {   
+    text-align: right !important;
+    width: auto !important;   
+}
+
+.invoice-ins-customer td {    
+    //padding: 4px !important;    
+    text-align: left !important;
+    width: auto !important;   
+}
+
+.invoice-mycompany {
+    margin: 0px 30px 0px auto;
+    padding: 0px;    
+    text-align: right;
+    width:auto !important;
+}
+
+.invoice-mycompany th {
+    text-align: center;
+}
+
+.invoice-products {
+    //clear:both;
+    margin: 20px 0px;
+    padding: 0px;
+    text-align: center;        
+}
+
+.invoice-products th {
+    text-align: center;        
+}
+
+.invoice-products tfoot {
+    border-top: 3px solid black;
+    //bottom: 0px;    
+    display: table-footer-group;
+    //height: auto;
+    //position: relative;
+    text-align: left;
+    
+}
+
+.logo-header-invoice {
+    float:right;
+    height: 140px;
+    margin: 0px 0px 0px 0px;
+    width:auto;
+}
+
+.logo-header {
+    border:3px solid green;
+    float:left;
+    height: 90px;
+    margin: 28px 25px 0px 0px;
+    position: relative;
+    top: -25px;
+    width:auto;
+}
+
+
+.table-queryValues th {
+    text-align: center;
+}

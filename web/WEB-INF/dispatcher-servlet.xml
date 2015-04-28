@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- was: <?xml version="1.0" encoding="UTF-8"?> -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd                        
+       
+                            http://www.springframework.org/schema/mvc
+                            http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd"
+
+       xmlns:mvc="http://www.springframework.org/schema/mvc">
+
+     
+    
+    <!--bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+    
+    <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+        <property name="mappings">
+            <props>
+                <prop key="index.htm">indexController</prop>
+                <prop key="invocing">invoicesControllerImpl</prop>
+            </props>
+        </property>
+    </bean-->
+
+    <bean id="viewResolver"
+          class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+          p:prefix="/WEB-INF/jsp/"
+          p:suffix=".jsp" />
+
+   
+    <!-- ******************** -->
+    <!-- CAPA DE PRESENTACION: capa cliente + capa web(capa web es mvc)  --> 
+    <!-- ******************** -->
+    <!-- bean class="com.xaduin.invoduin.presentation.controller.InvoicingController" id="invoicingControllerImpl">
+        <property name="InvoicingService" ref="invoicingServiceImpl"></property>
+    </bean -->
+       
+    <!-- The index controller. -->
+    <bean name="indexController"
+          class="org.springframework.web.servlet.mvc.ParameterizableViewController"
+          p:viewName="index" />
+    
+    
+    <!-- resources exclusions from servlet mapping -->
+    <mvc:resources mapping="/resources/**" location="/resources/mytheme/"/>
+    <mvc:resources mapping="/css/**" location="/resources/mytheme/css/"/>
+    <mvc:resources mapping="/img/**" location="/resources/mytheme/img/"/>
+    <mvc:resources mapping="/js/**"  location="/resources/mytheme/js/"/>
+
+</beans>

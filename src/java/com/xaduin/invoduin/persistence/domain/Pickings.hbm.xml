@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 21, 2015 7:11:40 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.xaduin.invoduin.persistence.domain.Pickings" table="pickings" catalog="aPequenaAldeaDB" optimistic-lock="version">
+        <id name="idpickings" type="java.lang.Integer">
+            <column name="idpickings" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="companies" class="com.xaduin.invoduin.persistence.domain.Companies" fetch="select">
+            <column name="customers_idcustomers" not-null="true" />
+        </many-to-one>
+        <many-to-one name="invoices" class="com.xaduin.invoduin.persistence.domain.Invoices" fetch="select">
+            <column name="invoices_idinvoices" not-null="true" />
+        </many-to-one>
+        <property name="number" type="string">
+            <column name="number" length="25" not-null="true" />
+        </property>
+        <property name="date" type="date">
+            <column name="date" length="10" not-null="true" />
+        </property>
+        <property name="committed" type="java.lang.Boolean">
+            <column name="committed" />
+        </property>
+        <property name="invoiced" type="boolean">
+            <column name="invoiced" not-null="true" />
+        </property>
+        <set name="picklineses" table="picklines" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="picking_idpicking" not-null="true" />
+            </key>
+            <one-to-many class="com.xaduin.invoduin.persistence.domain.Picklines" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,77 @@
+textarea, input, select {
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+form.clasico {
+    width: 100%;
+    background-color: #dfd;
+    padding: 8px;
+    border: 1px solid #7d403c;
+}
+
+form.clasico div.formfila {
+    display: block;
+    margin-top: 2px;
+    border-bottom: 5px #ffffff;
+}
+
+form.clasico fieldset {
+    border-collapse: collapse;
+    border: 1px solid #7d403c;
+    margin: auto;
+    padding: 6px;
+}
+
+form.clasico legend {
+    padding: 5px;
+    margin-bottom: 8px; /*IE*/
+    background: #34302D;
+    border: 1px solid #7d403c;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+form.clasico label {
+    display: block;
+    float: left;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+form.clasico textarea,
+form.clasico select,
+form.clasico input{
+    background: #ffffff url(images/form-textarea.png) repeat-x;
+    border: 1px solid #777;
+    margin: auto;
+}
+
+form.clasico .submit{
+    border-collapse: collapse;
+    height: 25px;
+    background-image: url(images/form-button-normal.gif);
+    margin: 6px 0 1px 0;
+}
+
+form.clasico .submit:hover {
+    border-collapse: collapse;
+    background-image: url(images/form-button-hover.gif);
+}
+
+form.clasico textarea:hover,
+form.clasico input:hover{    
+    border: 1px solid #7d403c;
+}
+
+form.clasico .center{
+    text-align: center;
+}

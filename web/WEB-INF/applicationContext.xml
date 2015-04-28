@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- was: <?xml version="1.0" encoding="UTF-8"?> -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+                            http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+                            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+                            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+
+                            http://www.springframework.org/schema/context 
+                            http://www.springframework.org/schema/context/spring-context-4.0.xsd                            
+                            http://www.springframework.org/schema/mvc
+                            http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd"
+                            
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc">
+       
+    
+    <!-- ********* -->
+    <!-- HIBERNATE -->
+    <!-- ********* -->    
+    <bean id="sessionFactoryImpl" 
+          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <!--property name="configurationClass">
+            <value>org.hibernate.cfg.AnnotationConfiguration</value>
+        </property-->
+        <property name="configLocation">
+            <value>classpath:hibernate.cfg.xml</value>
+        </property>            
+    </bean>
+        
+
+
+    <!-- en que paquete voy a colocar el codigo fuente java para que busque Service - Entity - Controller -->               
+    <context:component-scan base-package="com.xaduin.invoduin" />
+    <!-- indicamos que el proyecto spring trabaje con anotaciones -->
+    <mvc:annotation-driven /> 
+    
+    <!-- ************** -->
+    <!-- CAPA DE DATOS -->
+    <!-- ************** -->
+    <!--bean class="com.xaduin.invoduin.persistence.dao.impl.InvoicesDAOImpl" id="invoicesDAOImpl">
+        <property name="sessionFactory" ref="sessionFactoryImpl"></property>
+    </bean-->    
+    
+    <!-- ************************ -->
+    <!-- CAPA DE NEGOCIO O LOGICA -->
+    <!-- ************************ -->
+    <!--bean class="com.xaduin.invoduin.logical.service.impl.InvoicesServiceImpl" id="invoicesServiceImpl">
+        <property name="InvoicesDAO" ref="invoicesDAOImpl"></property>
+    </bean-->
+    
+</beans>
